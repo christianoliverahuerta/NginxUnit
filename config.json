@@ -1,0 +1,18 @@
+{
+        "app1":{
+        "type": "php",
+        "processes":10,
+        "root": "/var/www/app1/",
+        "environment": {
+                "APP_TESTVAR": "Test-Var"
+                },
+        "options": {
+                "admin": {
+                "memory_limit": "256M",
+                "variables_order": "EGPCS",
+                "expose_php": "1"
+                },
+                "user": {}
+                }
+        }
+}
