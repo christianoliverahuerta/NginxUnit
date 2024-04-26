@@ -62,6 +62,7 @@ height: 100vh;
 background: var(--body-color);
 }
 
+/***** Resuable CSS********/
 .sidebar .text{
 font-size: 16px;
 font-weight: 500;
@@ -74,6 +75,7 @@ display: flex;
 align-items: center;
 }
 
+/***** Sidebar********/
 .sidebar{
 position: fixed;
 top:0;
@@ -86,15 +88,16 @@ background: var(--sidebar-color);
 
 .sidebar li{
 height: 50px;
-}
-
-.sidebar header{
-position: relative;
 background: red;
 margin-top: 10px;
 list-style: none;
 display: flex;
 align-items:center;
+}
+
+.sidebar header{
+position: relative;
+
 }
 
 .sidebar .image-text img{
@@ -118,4 +121,20 @@ font-weight: 600;
 
 .header-text .profession{
 margin-top: -2px;
+}
+
+.sidebar header .toggle{
+position: absolute;
+top: 50%
+left: -25px;
+transform: translateV(-50%);
+height: 25px;
+width: 25px
+background: var(--primary-color);
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+color: var(--sidebar-color);
+font-size: 22px;
 }
