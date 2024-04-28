@@ -328,3 +328,7 @@ padding: 8px 40px;
 left: 88px;
 width: calc(100% - 88px);
 }
+
+nav.active .menu{
+left: -0%;
+}
