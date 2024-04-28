@@ -67,18 +67,7 @@ body.dark{
 --text-color: #CCC;
 }
 
-/***** Resuable CSS********/
-.sidebar .text{
-font-size: 16px;
-font-weight: 500;
-color: var(--text-color);
-}
 
-.sidebar .image{
-min-width: 60px;
-display: flex;
-align-items: center;
-}
 
 /* sidebar */
 .sidebar{
@@ -89,11 +78,36 @@ height: 100%;
 width: 250px;
 padding: 10px 14px;
 background: var(--sidebar-color);
+transition: var(--tran-05);
+}
+
+.sidebar.close{
+width: 88px;
+}
+
+/*  Resuable CSS */
+.sidebar .text{
+font-size: 16px;
+font-weight: 500;
+color: var(--text-color);
+transition: var(--tran-03);
+white-spaces: nowrap;
+opacity: 1;
+}
+
+.sidebar.close .text{
+opacity: 0;
+}
+
+.sidebar .image{
+min-width: 60px;
+display: flex;
+align-items: center;
 }
 
 .sidebar li{
 height: 50px;
-background: #ffffff;
+background: var(--sidebar-color);
 margin-top: 10px;
 list-style: none;
 display: flex;
@@ -190,7 +204,7 @@ color: var(--sidebar-color);
 }
 
 .sidebar .menu-bar{
-background: #ffffff;
+background: var(--sidebar-color);
 height: calc(100% - 50px);
 display: flex;
 flex-direction: column;
@@ -198,6 +212,8 @@ justify-content: space-between;
 }
 
 .menu-bar .mode{
+position: relative;
+border-radius: 6px;
 background: var(--primary-color-light);
 }
 
@@ -218,6 +234,8 @@ opacity: 0;
 }
 
 .menu-bar .mode .toggle-switch{
+position: absolute;
+right: 0px;
 display: flex;
 align-items: center;
 justify-content: center;
